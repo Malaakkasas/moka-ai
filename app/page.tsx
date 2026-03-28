@@ -40,10 +40,10 @@ export default function HomePage() {
       </nav>
 
       {/* Split layout */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-col lg:flex-row flex-1 overflow-auto">
 
         {/* Left — prompt panel */}
-        <div className="w-[420px] shrink-0 border-r border-white/5 flex flex-col p-8 gap-6 bg-[#110d1a]">
+        <div className="lg:w-[420px] shrink-0 lg:border-r border-b lg:border-b-0 border-white/5 flex flex-col p-6 lg:p-8 gap-6 bg-[#110d1a]">
           <div>
             <h2 className="text-xl font-semibold text-[#e2d9f3] mb-1">Create an image</h2>
             <p className="text-sm text-[#7c6f9a]">Describe what you want to see</p>
@@ -84,7 +84,7 @@ export default function HomePage() {
         </div>
 
         {/* Right — image panel */}
-        <div className="flex-1 flex items-center justify-center p-10 bg-[#0e0b14]">
+        <div className="flex-1 flex items-center justify-center p-6 lg:p-10 bg-[#0e0b14] min-h-[400px]">
           {isLoading ? (
             <div className="flex flex-col items-center gap-4 text-[#7c6f9a]">
               <div className="w-12 h-12 rounded-full border-2 border-[#a855f7] border-t-transparent animate-spin" />
